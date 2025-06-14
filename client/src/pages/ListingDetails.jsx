@@ -41,7 +41,6 @@ const ListingDetails = () => {
   console.log(listing)
 
 
-  /* BOOKING CALENDAR */
   const [dateRange, setDateRange] = useState([
     {
       startDate: new Date(),
@@ -51,7 +50,7 @@ const ListingDetails = () => {
   ]);
 
   const handleSelect = (ranges) => {
-    // Update the selected date range when user makes a selection
+
     setDateRange([ranges.selection]);
   };
 
@@ -59,7 +58,6 @@ const ListingDetails = () => {
   const end = new Date(dateRange[0].endDate);
   const dayCount = Math.round(end - start) / (1000 * 60 * 60 * 24); // Calculate the difference in day unit
 
-  /* SUBMIT BOOKING */
   const customerId = useSelector((state) => state?.user?._id)
 
   const navigate = useNavigate()

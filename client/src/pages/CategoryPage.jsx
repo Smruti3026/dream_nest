@@ -8,6 +8,7 @@ import Loader from "../components/Loader";
 import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
 
+
 const CategoryPage = () => {
   const [loading, setLoading] = useState(true);
   const { category } = useParams()
